@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../Provider/Authprovider';
 
 const Home = () => {
+    const inf= useContext(AuthContext);
+    console.log(inf);
     return (
         <div>
-            <div className="text-3xl">this is home</div>
+            <div className="text-3xl"> {inf.name} </div>
         </div>
     );
 };
