@@ -4,7 +4,7 @@ import { AuthContext } from '../Provider/Authprovider';
 
 const Login = () => {
 
-  const {createUser}=useContext(AuthContext);
+  const {signInUser}=useContext(AuthContext);
 
   const handleLogin =e=>{
    e.preventDefault();
@@ -12,7 +12,7 @@ const Login = () => {
     const password = e.target.password.value;
     console.log(email,password);
 
-    createUser(email,password)
+    signInUser(email,password)
     .then(result=>{
       console.log(result.user);
     })
